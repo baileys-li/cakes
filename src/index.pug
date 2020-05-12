@@ -43,8 +43,8 @@ html(lang="en")
 
                     picture.feature__pic
                         source(media="(max-width: 767px)", srcset=`img/${fileName}@375.webp`)
-                        source(media="(min-width: 768px", srcset=`img/${fileName}@768.webp`)
-                        source(media="(min-width: 1440px", srcset=`img/${fileName}@1440.webp`)
+                        source(media="(min-width: 768px) and (max-width: 1439px)", srcset=`img/${fileName}@768.webp`)
+                        source(media="(min-width: 1440px)", srcset=`img/${fileName}@1440.webp`)
                         img(src=`img/${fileName}.jpg`, alt=altText).feature__img
 
                     figcaption.feature__caption
