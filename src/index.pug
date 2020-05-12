@@ -20,9 +20,15 @@ html(lang="en")
                     p._text No doubt, you need more one pot dinners in your life like this easy Bosnian-style chicken and rice. This recipe is made all over the world with countless variations on the theme.
 
                 form._form.form
-                    input(type="text", name="name", placeholder="Your Name").form__input
-                    input(type="email", name="email", placeholder="Your Email").form__input
-                    input(type="tel", name="phone",  placeholder="Phone").form__input
+
+                    mixin createInput(name, labelText, type)
+                        label(for=`form__${name}`).visually-hidden= "Enter " + labelText
+                        input(type=type, name=name, placeholder=labelText, id=`form__${name}`).form__input
+
+                    +createInput("name", "Your Name", "text")
+                    +createInput("email", "Your Email", "email")
+                    +createInput("tel", "Phone", "tel")
+            
 
                     button.button.form__button Download eBook Now
 
