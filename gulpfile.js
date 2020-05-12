@@ -23,13 +23,13 @@ const paths = {
   },
 
   sass: {
-    src: srcBase + "sass/**/*.{sass,scss}",
-    dest: srcBase + "css/",
+    src: srcBase + "**/*.{sass,scss}",
+    dest: srcBase,
   },
 
   css: {
-    src: srcBase + "css/**/*.css",
-    dest: destBase + "css/",
+    src: srcBase + "**/*.css",
+    dest: destBase + "/css/",
   },
 
   images: {
