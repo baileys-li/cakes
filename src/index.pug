@@ -40,17 +40,13 @@ html(lang="en")
 
             mixin makeCakeArticle(modClass, fileName, altText, headline, text)
                 figure(class="feature--"+modClass).feature
-                    picture.feature__pic
-                        img(srcset=`img/${fileName}@375.webp 375w, 
-                                    img/${fileName}@375.webp 768w,
-                                    img/${fileName}@375.webp 1440w` 
-                            sizes=`(max-width: 766px) 344px,
-                                (min-width: 768px) 344px,
-                                (min-width: 1440px) 627px`,
-                                    
-                            src=`img/${fileName}.jpg`, alt=altText).feature__img
 
-    
+                    picture.feature__pic
+                        source(media="(max-width: 767px)", srcset=`img/${fileName}@375.webp`)
+                        source(media="(min-width: 768px", srcset=`img/${fileName}@768.webp`)
+                        source(media="(min-width: 1440px", srcset=`img/${fileName}@1440.webp`)
+                        img(src=`img/${fileName}.jpg`, alt=altText).feature__img
+
                     figcaption.feature__caption
                         h2.feature__header= headline
                         p.feature__text= text
