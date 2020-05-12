@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Learn How To Bake In 5 Easy Steps
+
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap")
+
+    body
+
+        section.intro
+            .intro__wrapper.container
+                article.intro__article
+                    p.intro__subheader Get started within 2 minutes
+                    h1.intro__header Learn How To Bake In 5 Easy Steps
+
+                    p.intro__text No doubt, you need more one pot dinners in your life like this easy Bosnian-style chicken and rice. This recipe is made all over the world with countless variations on the theme.
+
+                form.intro__form.form
+                    input(type="text", name="name", placeholder="Your Name").form__input
+                    input(type="email", name="email", placeholder="Your Email").form__input
+                    input(type="tel", name="phone",  placeholder="Phone").form__input
+
+                    button.button.form__button Download eBook Now
+
+                    sub.form__note * We don’t share your personal info with anyone. <br> Check out our Policy for more information.
+
+
+
+        section.features.container
+
+            mixin makeCakeArticle(modClass, fileName, altText, headline, text)
+                figure(class="feature--"+modClass).feature
+                    picture.feature__pic
+                    //- 
+                        srcset(`img/${fileName}@375w.webp`, type="image/webp"
+                        img(src=`img/${fileName}.jpg`, alt=altText).feature__img
+                    figcaption.feature__caption
+                        h2.feature__header= headline
+                        p.feature__text= text
+
+            +makeCakeArticle("level",
+            "cake", "Some sweet cake", 
+            "Do you know how to level a cake?", 
+            "After years of cake successes and flops, I’m confident in this homemade vanilla cake. During my recipe testing, I combined my white cake recipe and naked cake recipe. These are two reader favorites and I knew they’d be the best starting point.")
+            
+            +makeCakeArticle("vanilla",
+            "vanilla", "Vanilla cake",
+            "Vanilla Cake Success Tips",
+            "I always eyeball the amount of frosting between cake layers, but I measured when I decorated the pictured cake. The vanilla buttercream recipe below yields about 6 cups of frosting. I recommend you use about 1.5 heaping cups of buttercream between each cake layer and reserve the last 3 cups for outside the cake.")
+
