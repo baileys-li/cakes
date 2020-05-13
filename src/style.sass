@@ -1,3 +1,10 @@
+ /* Variables */
+$main-text-color: #7a7a7a
+$tablet-breakpoint: 768px
+$desktop-breakpoint: 1440px
+
+
+    
 *,
 *::before,
 *::after
@@ -38,9 +45,9 @@ input[type="radio"].visually-hidden
 
 .container
     padding: 0 15px
-    @media screen and ( min-width:  768px)
+    @media screen and ( min-width:  $tablet-breakpoint)
         padding: 0 30px
-    @media screen and ( min-width:  1440px)
+    @media screen and ( min-width:  $desktop-breakpoint)
         max-width: 1290px
         padding: 0
         margin: 0 auto
@@ -84,7 +91,7 @@ input[type="radio"].visually-hidden
         background-color: #e3f5f2
 
 
-    @media screen and ( min-width:  768px)
+    @media screen and ( min-width:  $tablet-breakpoint)
         padding: 190px 0
         background-position: 100% 0
         background-image: url(../img/bg--tablet.jpg)
@@ -99,7 +106,7 @@ input[type="radio"].visually-hidden
             width: 50%
 
     &__wrapper
-        @media screen and ( min-width:  768px)
+        @media screen and ( min-width:  $tablet-breakpoint)
             display: flex
             align-items: center
             justify-content: space-between
@@ -114,9 +121,9 @@ input[type="radio"].visually-hidden
         max-width: 301px
         margin-bottom: 40px
 
-        @media screen and ( min-width:  768px)
+        @media screen and ( min-width:  $tablet-breakpoint)
             margin: 0
-        @media screen and ( min-width:  1440px)
+        @media screen and ( min-width:  $desktop-breakpoint)
             padding-top: 23px
 
     &__subheader
@@ -140,10 +147,10 @@ input[type="radio"].visually-hidden
         margin: 0 0 22px
         max-width: 18ch
 
-        @media screen and ( min-width:  768px)
+        @media screen and ( min-width:  $tablet-breakpoint)
             font-size: 30px
             line-height: 1.27
-        @media screen and ( min-width:  1440px)
+        @media screen and ( min-width:  $desktop-breakpoint)
             margin-bottom: 29px
 
 
@@ -153,7 +160,7 @@ input[type="radio"].visually-hidden
         font-size: 16px
         line-height: 1.75
         margin: 0
-        color: #7a7a7a
+        color: $main-text-color
 
 
 
@@ -163,7 +170,7 @@ input[type="radio"].visually-hidden
     border-radius: 10px
     max-width: 343px
     padding: 40px 22px 37px 
-    @media screen and ( min-width:  1440px)
+    @media screen and ( min-width:  $desktop-breakpoint)
         max-width: 411px
         padding: 78px 57px 73px
 
@@ -193,12 +200,12 @@ input[type="radio"].visually-hidden
         font-size: 13px
         line-height: 1.77
 
-        color: #7A7A7A
+        color: $main-text-color
 
 .features
     margin: 40px 0
 
-    @media screen and ( min-width:  1440px)
+    @media screen and ( min-width:  $desktop-breakpoint)
         margin: 70px auto
         max-width: 1070px
 
@@ -208,13 +215,13 @@ input[type="radio"].visually-hidden
     &--level
         margin-bottom: 36px
 
-    @media screen and ( min-width:  768px)
+    @media screen and ( min-width:  $tablet-breakpoint)
         display: flex
         justify-content: space-between
         align-items: center
         &--level
             margin-bottom: 30px
-    @media screen and ( min-width:  1440px)
+    @media screen and ( min-width:  $desktop-breakpoint)
         &--level
             margin-bottom: 50px
 
@@ -226,11 +233,11 @@ input[type="radio"].visually-hidden
         width: 100%
         height: 240px
         
-        @media screen and ( min-width:  768px)
+        @media screen and ( min-width:  $tablet-breakpoint)
             width: 48.59%
             height: 350px
 
-        @media screen and ( min-width:  1440px)
+        @media screen and ( min-width:  $desktop-breakpoint)
             width: 58.87%
     &__img
         max-height: 100%
@@ -238,10 +245,10 @@ input[type="radio"].visually-hidden
         object-fit: cover
 
     &__caption
-        @media screen and ( min-width:  768px)
+        @media screen and ( min-width:  $tablet-breakpoint)
             width: 44.1%
             // padding-top: 11px
-        @media screen and ( min-width:  1440px)
+        @media screen and ( min-width:  $desktop-breakpoint)
             width: 34.29%
 
 
@@ -250,14 +257,14 @@ input[type="radio"].visually-hidden
         font-size: 22px
         line-height: 1.55
         letter-spacing: -0.5px
-        @media screen and ( min-width:  768px)
+        @media screen and ( min-width:  $tablet-breakpoint)
             margin: 0 0 25px
 
     &__text
         font-size: 16px
         line-height: 1.75
-        color: #7A7A7A
-        @media screen and ( min-width:  768px)
+        color: $main-text-color
+        @media screen and ( min-width:  $tablet-breakpoint)
             margin: 0
 
 
