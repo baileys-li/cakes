@@ -1,0 +1,13 @@
+{
+	"name": "Cake Recipe",
+	"short_name": "Cake",
+	"theme_color": "#0ad9c6",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/",
+	"icons": [
+	  { "src": "/icon@192.png", "type": "image/png", "sizes": "192x192" },
+	  { "src": "/icon@512.png", "type": "image/png", "sizes": "512x512" }
+	]
+  }
