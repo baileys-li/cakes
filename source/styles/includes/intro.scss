@@ -1,0 +1,129 @@
+@use "../common/_variables" as *;
+
+.intro {
+	position: relative;
+	z-index: 0;
+
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	padding: {
+		top: 50px;
+		bottom: 50px;
+	}
+
+	background-color: $accent-back;
+
+	$mob-bg-w: 60px;
+	$relative-bg-w: $mob-bg-w / 375px * 100vw;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		width: $mob-bg-w;
+		max-width: $relative-bg-w;
+		height: 100%;
+
+		background: {
+			position: right top;
+
+			color: rgb(215, 167, 183);
+
+			image: url(../img/bg.jpg);
+			repeat: no-repeat;
+			size: cover;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+
+		grid-gap: 2.5rem;
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__article {
+		display: grid;
+	}
+
+	&__subheader {
+		order: -1;
+		margin: 0 0 7px;
+
+		font: {
+			size: 14 / 16 * 1rem;
+			style: normal;
+			weight: bold;
+		}
+		line-height: 1.43;
+		text-transform: uppercase;
+		letter-spacing: 0.0774em;
+	}
+
+	&__header {
+		max-width: 18ch;
+		margin: 0 0 25 / 16 * 1rem;
+	}
+
+	&__form {
+		justify-self: center;
+	}
+
+	$tablet-breakpoint: 650px;
+
+	@media screen and (max-width: $tablet-breakpoint - 1px) {
+		&__article {
+			width: calc(100% - #{$mob-bg-w});
+			max-width: 100vw - $relative-bg-w;
+		}
+	}
+	@media screen and (min-width: $tablet-breakpoint) {
+		$tb-bg-w: 208px;
+		$relative-bg-w: $tb-bg-w / 768px * 100vh;
+
+		&::before {
+			width: $tb-bg-w;
+			max-width: $relative-bg-w;
+
+			background-image: url(../img/bg--tablet.jpg);
+		}
+
+		&__wrapper {
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			grid-gap: 58px / $tablet-breakpoint * 100vw;
+			grid-template-columns: 1fr auto;
+		}
+
+		&__header {
+			margin-bottom: 30 / 16 * 1rem;
+		}
+
+		$desktop-breakpoint: 1250px;
+
+		@media screen and (min-width: $desktop-breakpoint) {
+			&::before {
+				width: 50%;
+				max-width: none;
+
+				background-image: url(../img/bg--pc.jpg);
+			}
+			&__wrapper {
+				grid-template-columns: 1fr 27.5rem 1fr;
+			}
+
+			&__text {
+				max-width: 32ch;
+			}
+		}
+	}
+}

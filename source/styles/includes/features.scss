@@ -1,0 +1,58 @@
+@use "../common/_variables" as *;
+
+.features {
+	margin: 40px 0;
+	max-width: 1070px;
+	display: grid;
+	grid-gap: 40px;
+
+	@media screen and (min-width: $tablet-breakpoint) {
+		grid-gap: 30px;
+	}
+
+	@media screen and (min-width: $desktop-breakpoint) {
+		margin: 70px auto;
+		grid-gap: 50px;
+	}
+}
+
+.feature {
+	margin: 0;
+	display: grid;
+	grid-gap: 20px 52px;
+
+	&__img {
+		width: 100%;
+	}
+
+	&__header {
+		margin: 0 0 1rem;
+	}
+
+	&__text:first-of-type {
+		margin: 0;
+	}
+
+	@media screen and (min-width: $tablet-breakpoint) {
+		grid-template-columns: 344px 1fr;
+		align-items: center;
+
+		&__header {
+			margin-bottom: 30 / 16 * 1rem;
+		}
+	}
+
+	@media screen and (min-width: $desktop-breakpoint) {
+		grid-template-columns: 627px 1fr;
+
+		grid-gap: 72px;
+		$block: &;
+
+		&:nth-child(2n + 2) {
+			grid-template-columns: 1fr 627px;
+			#{$block}__pic {
+				order: 1;
+			}
+		}
+	}
+}

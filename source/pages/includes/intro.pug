@@ -1,0 +1,16 @@
+section.intro
+	._wrapper.container
+		article._article
+			h1._header=title
+			p(role="doc-subtitle")._subheader Get started within 2 minutes
+
+			p._text No doubt, you need more one pot dinners in your life like this easy Bosnian-style chicken and rice. This recipe is made all over the world with countless variations on the theme.
+
+		form(method="POST")._form.form
+			+createInput("name", "Your Name", "text")
+			+createInput("email", "Your Email", "email")
+			+createInput("tel", "Phone", "tel")
+
+			button.button.form__button Download eBook Now
+
+			sub.form__note * We don’t share your personal info with anyone. <br> Check out our Policy for more information.

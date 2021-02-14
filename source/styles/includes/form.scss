@@ -1,0 +1,40 @@
+@use '../common/_variables' as *;
+
+.form {
+	background: rgba(28, 28, 28, 0.9);
+	border-radius: 10px;
+	max-width: 342 / 16 * 1rem;
+	padding: 40px 22px 37px;
+	@media screen and (min-width: $desktop-breakpoint) {
+		max-width: none;
+		padding: 78px 57px 73px;
+	}
+
+	&__input {
+		width: 100%;
+		margin-bottom: 20 / 16 * 1rem;
+		padding:  10px 30px;
+		min-height: 48 / 16 * 1rem;
+
+		font-size: 1rem;
+		line-height: 1.5;
+
+		color: #1c1c1c;
+
+		background: #ffffff;
+		border: none;
+		border-radius: 4px;
+	}
+	&__button {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	&__note {
+		font-weight: 300;
+		font-size: 13 / 16 * 1rem;
+		line-height: 1.77;
+
+		color: $main-text-color;
+	}
+}

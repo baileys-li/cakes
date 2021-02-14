@@ -1,0 +1,13 @@
+@use '../common/_variables' as *;
+
+.container {
+	padding: 0 15px;
+	@media screen and (min-width: $tablet-breakpoint) {
+		padding: 0 30px;
+	}
+	@media screen and (min-width: $desktop-breakpoint) {
+		max-width: 1290px;
+		padding: 0;
+		margin: 0 auto;
+	}
+}

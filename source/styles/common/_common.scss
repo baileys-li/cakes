@@ -1,0 +1,61 @@
+@use "variables";
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+html {
+	box-sizing: border-box;
+
+	font-family: "Open Sans", "Arial", sans-serif;
+}
+
+body {
+	color: variables.$main-text-color;
+	background-color: #ffffff;
+
+	font: {
+		size: 16px;
+		weight: normal;
+		style: normal;
+	}
+	line-height: 1.75;
+}
+
+h1 {
+	font: {
+		style: normal;
+		weight: bold;
+		size: 26 / 16 * 1rem;
+	}
+	line-height: 1.46;
+
+	letter-spacing: -1.27273 / 16 * 1rem;
+
+	color: variables.$darker-text;
+
+	@media (min-width: variables.$tablet-breakpoint) {
+		font-size: 30 / 16 * 1rem;
+		line-height: 1.27;
+	}
+}
+
+h2 {
+	font: {
+		style: normal;
+		weight: bold;
+		size: 22 / 16 * 1rem;
+	}
+	line-height: 1.55;
+
+	letter-spacing: -0.5px;
+
+	color: variables.$darker-text;
+}
